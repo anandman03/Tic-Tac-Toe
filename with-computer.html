@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Player Mode</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+</head>
+<body>
+    
+    <h1>Tic Tac Toe</h1>
+
+    <div id="container">
+        <table id="board">
+            <tr class="row">
+                <td id="cell" cell-index="0"></td>
+                <td id="cell" cell-index="1"></td>
+                <td id="cell" cell-index="2"></td>
+            </tr>
+            <tr class="row">
+                <td id="cell" cell-index="3"></td>
+                <td id="cell" cell-index="4"></td>
+                <td id="cell" cell-index="5"></td>
+            </tr>
+            <tr class="row">
+                <td id="cell" cell-index="6"></td>
+                <td id="cell" cell-index="7"></td>
+                <td id="cell" cell-index="8"></td>
+            </tr>
+        </table>
+
+        <div id="final-screen">
+            <div id="winner"></div>
+            <br>
+            <a href="" id="new-game">Play Again</a>
+        </div>
+        <div id="choice">
+            <button onclick="userInput('X')">X</button>
+            <button onclick="userInput('O')">O</button>
+        </div>
+
+    </div>
+
+    <script src="script-single-player.js"></script>
+</body>
+</html>
+
+<footer>
+    <p class="center">Created with <i class="fa fa-heart" style="color: #FF5252"></i> by <a href="https://github.com/anandman03" target="_blank">Mansimar Anand</a>
+    </p>
+</footer>
+
+</body>
+</html>
