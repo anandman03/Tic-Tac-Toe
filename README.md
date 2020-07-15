@@ -1,13 +1,13 @@
-A Tic-Tac-Toe game made using pure html, javascript and basic css styling.
+A Tic-Tac-Toe game is made using pure html, javascript and basic css styling.
 This Tic-Tac-Toe game has two modes :-
 1. Single Player
 2. Multi Player
 
-The main feature of single player mode is the computer as the opponent which is really hard to beat.
+The main feature of single player mode is the computer as the opponent.
 The computer will be really hard to beat as it will always perform the winning/optimal move which in worst case would end up as tie.
 
 How the whole algorithm work?
-1. User fill the desired cell if it is user's turn.
+1. User fill's the desired cell if it is user's turn.
 2. The selected cell is checked wheather it is empty or not.
 3. If empty then the cell is filled and checked if any result is concluded.
 4. After the move and validation the turn is changed to other user/computer.
