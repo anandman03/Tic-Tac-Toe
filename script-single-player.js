@@ -103,204 +103,117 @@ function handleCellClick(clickedCellEvent) {
     resultValidation()
 }
 
+function Selector(index) {
+    currentGameState[index] = computer
+    document.querySelector(`td[cell-index="${index}"]`).innerHTML = computer
+    resultValidation()
+}
+
 function computerPlay() {
     //If there is a chance to Win
 
     if(currentGameState[0] == '' && ((currentGameState[1] == computer && computer == currentGameState[2]) || (currentGameState[4] == computer && computer == currentGameState[8]) || (currentGameState[3] == computer && computer == currentGameState[6]))) {
-        currentGameState[0] = computer
-        document.querySelector('td[cell-index="0"]').innerHTML = computer
-        resultValidation()
-        return
+        Selector(0)
     }
-    if(currentGameState[1] == '' && ((currentGameState[0] == computer && computer == currentGameState[2]) || (currentGameState[4] == computer && computer == currentGameState[7]))) {
-        currentGameState[1] = computer
-        document.querySelector('td[cell-index="1"]').innerHTML = computer
-        resultValidation()
-        return
+    else if(currentGameState[1] == '' && ((currentGameState[0] == computer && computer == currentGameState[2]) || (currentGameState[4] == computer && computer == currentGameState[7]))) {
+        Selector(1)
     }
-    if(currentGameState[2] == '' && ((currentGameState[0] == computer && computer == currentGameState[1]) || (currentGameState[5] == computer && computer == currentGameState[8]) || (currentGameState[4] == computer && computer == currentGameState[6]))) {
-        currentGameState[2] = computer
-        document.querySelector('td[cell-index="2"]').innerHTML = computer
-        resultValidation()
-        return
+    else if(currentGameState[2] == '' && ((currentGameState[0] == computer && computer == currentGameState[1]) || (currentGameState[5] == computer && computer == currentGameState[8]) || (currentGameState[4] == computer && computer == currentGameState[6]))) {
+        Selector(2)
     }
-    if(currentGameState[3] == '' && ((currentGameState[0] == computer && computer == currentGameState[6]) || (currentGameState[4] == computer && computer == currentGameState[5]))) {
-        currentGameState[3] = computer
-        document.querySelector('td[cell-index="3"]').innerHTML = computer
-        resultValidation()
-        return
+    else if(currentGameState[3] == '' && ((currentGameState[0] == computer && computer == currentGameState[6]) || (currentGameState[4] == computer && computer == currentGameState[5]))) {
+        Selector(3)
     }
-    if(currentGameState[4] == '' && ((currentGameState[3] == computer && computer == currentGameState[5]) || (currentGameState[1] == computer && computer == currentGameState[7]) || (currentGameState[0] == computer && computer == currentGameState[8]) || (currentGameState[2] == computer && computer == currentGameState[6]))) {
-        currentGameState[4] = computer
-        document.querySelector('td[cell-index="4"]').innerHTML = computer
-        resultValidation()
-        return
+    else if(currentGameState[4] == '' && ((currentGameState[3] == computer && computer == currentGameState[5]) || (currentGameState[1] == computer && computer == currentGameState[7]) || (currentGameState[0] == computer && computer == currentGameState[8]) || (currentGameState[2] == computer && computer == currentGameState[6]))) {
+        Selector(4)
     }
-    if(currentGameState[5] == '' && ((currentGameState[3] == computer && computer == currentGameState[4]) || (currentGameState[2] == computer && computer == currentGameState[8]))) {
-        currentGameState[5] = computer
-        document.querySelector('td[cell-index="5"]').innerHTML = computer
-        resultValidation()
-        return
+    else if(currentGameState[5] == '' && ((currentGameState[3] == computer && computer == currentGameState[4]) || (currentGameState[2] == computer && computer == currentGameState[8]))) {
+        Selector(5)
     }
-    if(currentGameState[6] == '' && ((currentGameState[1] == computer && computer == currentGameState[3]) || (currentGameState[7] == computer && computer == currentGameState[8]) || (currentGameState[2] == computer && computer == currentGameState[4]))) {
-        currentGameState[6] = computer
-        document.querySelector('td[cell-index="6"]').innerHTML = computer
-        resultValidation()
-        return
+    else if(currentGameState[6] == '' && ((currentGameState[1] == computer && computer == currentGameState[3]) || (currentGameState[7] == computer && computer == currentGameState[8]) || (currentGameState[2] == computer && computer == currentGameState[4]))) {
+        Selector(6)
     }
-    if(currentGameState[7] == '' && ((currentGameState[1] == computer && computer == currentGameState[4]) || (currentGameState[6] == computer && computer == currentGameState[8]))) {
-        currentGameState[7] = computer
-        document.querySelector('td[cell-index="7"]').innerHTML = computer
-        resultValidation()
-        return
+    else if(currentGameState[7] == '' && ((currentGameState[1] == computer && computer == currentGameState[4]) || (currentGameState[6] == computer && computer == currentGameState[8]))) {
+        Selector(7)
     }
-    if(currentGameState[8] == '' && ((currentGameState[0] == computer && computer == currentGameState[4]) || (currentGameState[7] == computer && computer == currentGameState[6]) || (currentGameState[2] == computer && computer == currentGameState[5]))) {
-        currentGameState[8] = computer
-        document.querySelector('td[cell-index="8"]').innerHTML = computer
-        resultValidation()
-        return
+    else if(currentGameState[8] == '' && ((currentGameState[0] == computer && computer == currentGameState[4]) || (currentGameState[7] == computer && computer == currentGameState[6]) || (currentGameState[2] == computer && computer == currentGameState[5]))) {
+        Selector(8)
     }
 
     //If there is a chance to block.
-    if(currentGameState[0] == '' && ((currentGameState[1] == player && player == currentGameState[2]) || (currentGameState[4] == player && player == currentGameState[8]) || (currentGameState[3] == player && player == currentGameState[6]))) {
-        currentGameState[0] = computer
-        document.querySelector('td[cell-index="0"]').innerHTML = computer
-        resultValidation()
-        return
+    else if(currentGameState[0] == '' && ((currentGameState[1] == player && player == currentGameState[2]) || (currentGameState[4] == player && player == currentGameState[8]) || (currentGameState[3] == player && player == currentGameState[6]))) {
+        Selector(0)
     }
-    if(currentGameState[1] == '' && ((currentGameState[0] == player && player == currentGameState[2]) || (currentGameState[4] == player && player == currentGameState[7]))) {
-        currentGameState[1] = computer
-        document.querySelector('td[cell-index="1"]').innerHTML = computer
-        resultValidation()
-        return
+    else if(currentGameState[1] == '' && ((currentGameState[0] == player && player == currentGameState[2]) || (currentGameState[4] == player && player == currentGameState[7]))) {
+        Selector(1)
     }
-    if(currentGameState[2] == '' && ((currentGameState[0] == player && player == currentGameState[1]) || (currentGameState[5] == player && player == currentGameState[8]) || (currentGameState[4] == player && player == currentGameState[6]))) {
-        currentGameState[2] = computer
-        document.querySelector('td[cell-index="2"]').innerHTML = computer
-        resultValidation()
-        return
+    else if(currentGameState[2] == '' && ((currentGameState[0] == player && player == currentGameState[1]) || (currentGameState[5] == player && player == currentGameState[8]) || (currentGameState[4] == player && player == currentGameState[6]))) {
+        Selector(2)
     }
-    if(currentGameState[3] == '' && ((currentGameState[0] == player && player == currentGameState[6]) || (currentGameState[4] == player && player == currentGameState[5]))) {
-        currentGameState[3] = computer
-        document.querySelector('td[cell-index="3"]').innerHTML = computer
-        resultValidation()
-        return
+    else if(currentGameState[3] == '' && ((currentGameState[0] == player && player == currentGameState[6]) || (currentGameState[4] == player && player == currentGameState[5]))) {
+        Selector(3)
     }
-    if(currentGameState[4] == '' && ((currentGameState[3] == player && player == currentGameState[5]) || (currentGameState[1] == player && player == currentGameState[7]) || (currentGameState[0] == player && player == currentGameState[8]) || (currentGameState[2] == player && player == currentGameState[6]))) {
-        currentGameState[4] = computer
-        document.querySelector('td[cell-index="4"]').innerHTML = computer
-        resultValidation()
-        return
+    else if(currentGameState[4] == '' && ((currentGameState[3] == player && player == currentGameState[5]) || (currentGameState[1] == player && player == currentGameState[7]) || (currentGameState[0] == player && player == currentGameState[8]) || (currentGameState[2] == player && player == currentGameState[6]))) {
+        Selector(4)
     }
-    if(currentGameState[5] == '' && ((currentGameState[3] == player && player == currentGameState[4]) || (currentGameState[2] == player && player == currentGameState[8]))) {
-        currentGameState[5] = computer
-        document.querySelector('td[cell-index="5"]').innerHTML = computer
-        resultValidation()
-        return
+    else if(currentGameState[5] == '' && ((currentGameState[3] == player && player == currentGameState[4]) || (currentGameState[2] == player && player == currentGameState[8]))) {
+        Selector(5)
     }
-    if(currentGameState[6] == '' && ((currentGameState[1] == player && player == currentGameState[3]) || (currentGameState[7] == player && player == currentGameState[8]) || (currentGameState[2] == player && player == currentGameState[4]))) {
-        currentGameState[6] = computer
-        document.querySelector('td[cell-index="6"]').innerHTML = computer
-        resultValidation()
-        return
+    else if(currentGameState[6] == '' && ((currentGameState[1] == player && player == currentGameState[3]) || (currentGameState[7] == player && player == currentGameState[8]) || (currentGameState[2] == player && player == currentGameState[4]))) {
+        Selector(6)
     }
-    if(currentGameState[7] == '' && ((currentGameState[1] == player && player == currentGameState[4]) || (currentGameState[6] == player && player == currentGameState[8]))) {
-        currentGameState[7] = computer
-        document.querySelector('td[cell-index="7"]').innerHTML = computer
-        resultValidation()
-        return
+    else if(currentGameState[7] == '' && ((currentGameState[1] == player && player == currentGameState[4]) || (currentGameState[6] == player && player == currentGameState[8]))) {
+        Selector(7)
     }
-    if(currentGameState[8] == '' && ((currentGameState[0] == player && player == currentGameState[4]) || (currentGameState[7] == player && player == currentGameState[6]) || (currentGameState[2] == player && player == currentGameState[5]))) {
-        currentGameState[8] = computer
-        document.querySelector('td[cell-index="8"]').innerHTML = computer
-        resultValidation()
-        return
+    else if(currentGameState[8] == '' && ((currentGameState[0] == player && player == currentGameState[4]) || (currentGameState[7] == player && player == currentGameState[6]) || (currentGameState[2] == player && player == currentGameState[5]))) {
+        Selector(8)
     }
 
     //Use Center Position is available
-    if(currentGameState[4] == '') {
-        currentGameState[4] = computer
-        document.querySelector('td[cell-index="4"]').innerHTML = computer
-        resultValidation()
-        return
+    else if(currentGameState[4] == '') {
+        Selector(4)
     }
 
     //Opposite Corner Case
-    if(currentGameState[0] == '' && currentGameState[2] == player && currentGameState[6] == player) {
-        currentGameState[0] = computer
-        document.querySelector('td[cell-index="0"]').innerHTML = computer
-        resultValidation()
-        return
+    else if(currentGameState[0] == '' && currentGameState[2] == player && currentGameState[6] == player) {
+        Selector(0)
     }
-    if(currentGameState[2] == '' && currentGameState[0] == player && currentGameState[8] == player) {
-        currentGameState[2] = computer
-        document.querySelector('td[cell-index="2"]').innerHTML = computer
-        resultValidation()
-        return
+    else if(currentGameState[2] == '' && currentGameState[0] == player && currentGameState[8] == player) {
+        Selector(2)
     }
-    if(currentGameState[8] == '' && currentGameState[2] == player && currentGameState[6] == player) {
-        currentGameState[8] = computer
-        document.querySelector('td[cell-index="8"]').innerHTML = computer
-        resultValidation()
-        return
+    else if(currentGameState[8] == '' && currentGameState[2] == player && currentGameState[6] == player) {
+        Selector(8)
     }
-    if(currentGameState[6] == '' && currentGameState[8] == player && currentGameState[0] == player) {
-        currentGameState[6] = computer
-        document.querySelector('td[cell-index="6"]').innerHTML = computer
-        resultValidation()
-        return
+    else if(currentGameState[6] == '' && currentGameState[8] == player && currentGameState[0] == player) {
+        Selector(6)
     }
 
     //Empty Corner Case
-    if(currentGameState[0] == '') {
-        currentGameState[0] = computer
-        document.querySelector('td[cell-index="0"]').innerHTML = computer
-        resultValidation()
-        return
+    else if(currentGameState[0] == '') {
+        Selector(0)
     }
-    if(currentGameState[2] == '') {
-        currentGameState[2] = computer
-        document.querySelector('td[cell-index="2"]').innerHTML = computer
-        resultValidation()
-        return
+    else if(currentGameState[2] == '') {
+        Selector(2)
     }
-    if(currentGameState[8] == '') {
-        currentGameState[8] = computer
-        document.querySelector('td[cell-index="8"]').innerHTML = computer
-        resultValidation()
-        return
+    else if(currentGameState[8] == '') {
+        Selector(8)
     }
-    if(currentGameState[6] == '') {
-        currentGameState[6] = computer
-        document.querySelector('td[cell-index="6"]').innerHTML = computer
-        resultValidation()
-        return
+    else if(currentGameState[6] == '') {
+        Selector(6)
     }
 
     //Empty Side
-    if(currentGameState[1] == '') {
-        currentGameState[1] = computer
-        document.querySelector('td[cell-index="1"]').innerHTML = computer
-        resultValidation()
-        return
+    else if(currentGameState[1] == '') {
+        Selector(1)
     }
-    if(currentGameState[5] == '') {
-        currentGameState[5] = computer
-        document.querySelector('td[cell-index="5"]').innerHTML = computer
-        resultValidation()
-        return
+    else if(currentGameState[5] == '') {
+        Selector(5)
     }
-    if(currentGameState[7] == '') {
-        currentGameState[7] = computer
-        document.querySelector('td[cell-index="7"]').innerHTML = computer
-        resultValidation()
-        return
+    else if(currentGameState[7] == '') {
+        Selector(7)
     }
-    if(currentGameState[3] == '') {
-        currentGameState[3] = computer
-        document.querySelector('td[cell-index="3"]').innerHTML = computer
-        resultValidation()
-        return
+    else if(currentGameState[3] == '') {
+        Selector(3)
     }
 
 }
