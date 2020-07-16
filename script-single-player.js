@@ -109,110 +109,114 @@ function Selector(index) {
     resultValidation()
 }
 
+function isCellFree(index) {
+    return currentGameState[index] == ''
+}
+
 function computerPlay() {
     //If there is a chance to Win
 
-    if(currentGameState[0] == '' && ((currentGameState[1] == computer && computer == currentGameState[2]) || (currentGameState[4] == computer && computer == currentGameState[8]) || (currentGameState[3] == computer && computer == currentGameState[6]))) {
+    if(isCellFree(0) && ((currentGameState[1] == computer && computer == currentGameState[2]) || (currentGameState[4] == computer && computer == currentGameState[8]) || (currentGameState[3] == computer && computer == currentGameState[6]))) {
         Selector(0)
     }
-    else if(currentGameState[1] == '' && ((currentGameState[0] == computer && computer == currentGameState[2]) || (currentGameState[4] == computer && computer == currentGameState[7]))) {
+    else if(isCellFree(1) && ((currentGameState[0] == computer && computer == currentGameState[2]) || (currentGameState[4] == computer && computer == currentGameState[7]))) {
         Selector(1)
     }
-    else if(currentGameState[2] == '' && ((currentGameState[0] == computer && computer == currentGameState[1]) || (currentGameState[5] == computer && computer == currentGameState[8]) || (currentGameState[4] == computer && computer == currentGameState[6]))) {
+    else if(isCellFree(2) && ((currentGameState[0] == computer && computer == currentGameState[1]) || (currentGameState[5] == computer && computer == currentGameState[8]) || (currentGameState[4] == computer && computer == currentGameState[6]))) {
         Selector(2)
     }
-    else if(currentGameState[3] == '' && ((currentGameState[0] == computer && computer == currentGameState[6]) || (currentGameState[4] == computer && computer == currentGameState[5]))) {
+    else if(isCellFree(3) && ((currentGameState[0] == computer && computer == currentGameState[6]) || (currentGameState[4] == computer && computer == currentGameState[5]))) {
         Selector(3)
     }
-    else if(currentGameState[4] == '' && ((currentGameState[3] == computer && computer == currentGameState[5]) || (currentGameState[1] == computer && computer == currentGameState[7]) || (currentGameState[0] == computer && computer == currentGameState[8]) || (currentGameState[2] == computer && computer == currentGameState[6]))) {
+    else if(isCellFree(4) && ((currentGameState[3] == computer && computer == currentGameState[5]) || (currentGameState[1] == computer && computer == currentGameState[7]) || (currentGameState[0] == computer && computer == currentGameState[8]) || (currentGameState[2] == computer && computer == currentGameState[6]))) {
         Selector(4)
     }
-    else if(currentGameState[5] == '' && ((currentGameState[3] == computer && computer == currentGameState[4]) || (currentGameState[2] == computer && computer == currentGameState[8]))) {
+    else if(isCellFree(5) && ((currentGameState[3] == computer && computer == currentGameState[4]) || (currentGameState[2] == computer && computer == currentGameState[8]))) {
         Selector(5)
     }
-    else if(currentGameState[6] == '' && ((currentGameState[1] == computer && computer == currentGameState[3]) || (currentGameState[7] == computer && computer == currentGameState[8]) || (currentGameState[2] == computer && computer == currentGameState[4]))) {
+    else if(isCellFree(6) && ((currentGameState[1] == computer && computer == currentGameState[3]) || (currentGameState[7] == computer && computer == currentGameState[8]) || (currentGameState[2] == computer && computer == currentGameState[4]))) {
         Selector(6)
     }
-    else if(currentGameState[7] == '' && ((currentGameState[1] == computer && computer == currentGameState[4]) || (currentGameState[6] == computer && computer == currentGameState[8]))) {
+    else if(isCellFree(7) && ((currentGameState[1] == computer && computer == currentGameState[4]) || (currentGameState[6] == computer && computer == currentGameState[8]))) {
         Selector(7)
     }
-    else if(currentGameState[8] == '' && ((currentGameState[0] == computer && computer == currentGameState[4]) || (currentGameState[7] == computer && computer == currentGameState[6]) || (currentGameState[2] == computer && computer == currentGameState[5]))) {
+    else if(isCellFree(8) && ((currentGameState[0] == computer && computer == currentGameState[4]) || (currentGameState[7] == computer && computer == currentGameState[6]) || (currentGameState[2] == computer && computer == currentGameState[5]))) {
         Selector(8)
     }
 
     //If there is a chance to block.
-    else if(currentGameState[0] == '' && ((currentGameState[1] == player && player == currentGameState[2]) || (currentGameState[4] == player && player == currentGameState[8]) || (currentGameState[3] == player && player == currentGameState[6]))) {
+    else if(isCellFree(0) && ((currentGameState[1] == player && player == currentGameState[2]) || (currentGameState[4] == player && player == currentGameState[8]) || (currentGameState[3] == player && player == currentGameState[6]))) {
         Selector(0)
     }
-    else if(currentGameState[1] == '' && ((currentGameState[0] == player && player == currentGameState[2]) || (currentGameState[4] == player && player == currentGameState[7]))) {
+    else if(isCellFree(1) && ((currentGameState[0] == player && player == currentGameState[2]) || (currentGameState[4] == player && player == currentGameState[7]))) {
         Selector(1)
     }
-    else if(currentGameState[2] == '' && ((currentGameState[0] == player && player == currentGameState[1]) || (currentGameState[5] == player && player == currentGameState[8]) || (currentGameState[4] == player && player == currentGameState[6]))) {
+    else if(isCellFree(2) && ((currentGameState[0] == player && player == currentGameState[1]) || (currentGameState[5] == player && player == currentGameState[8]) || (currentGameState[4] == player && player == currentGameState[6]))) {
         Selector(2)
     }
-    else if(currentGameState[3] == '' && ((currentGameState[0] == player && player == currentGameState[6]) || (currentGameState[4] == player && player == currentGameState[5]))) {
+    else if(isCellFree(3) && ((currentGameState[0] == player && player == currentGameState[6]) || (currentGameState[4] == player && player == currentGameState[5]))) {
         Selector(3)
     }
-    else if(currentGameState[4] == '' && ((currentGameState[3] == player && player == currentGameState[5]) || (currentGameState[1] == player && player == currentGameState[7]) || (currentGameState[0] == player && player == currentGameState[8]) || (currentGameState[2] == player && player == currentGameState[6]))) {
+    else if(isCellFree(4) && ((currentGameState[3] == player && player == currentGameState[5]) || (currentGameState[1] == player && player == currentGameState[7]) || (currentGameState[0] == player && player == currentGameState[8]) || (currentGameState[2] == player && player == currentGameState[6]))) {
         Selector(4)
     }
-    else if(currentGameState[5] == '' && ((currentGameState[3] == player && player == currentGameState[4]) || (currentGameState[2] == player && player == currentGameState[8]))) {
+    else if(isCellFree(5) && ((currentGameState[3] == player && player == currentGameState[4]) || (currentGameState[2] == player && player == currentGameState[8]))) {
         Selector(5)
     }
-    else if(currentGameState[6] == '' && ((currentGameState[1] == player && player == currentGameState[3]) || (currentGameState[7] == player && player == currentGameState[8]) || (currentGameState[2] == player && player == currentGameState[4]))) {
+    else if(isCellFree(6) && ((currentGameState[1] == player && player == currentGameState[3]) || (currentGameState[7] == player && player == currentGameState[8]) || (currentGameState[2] == player && player == currentGameState[4]))) {
         Selector(6)
     }
-    else if(currentGameState[7] == '' && ((currentGameState[1] == player && player == currentGameState[4]) || (currentGameState[6] == player && player == currentGameState[8]))) {
+    else if(isCellFree(7) && ((currentGameState[1] == player && player == currentGameState[4]) || (currentGameState[6] == player && player == currentGameState[8]))) {
         Selector(7)
     }
-    else if(currentGameState[8] == '' && ((currentGameState[0] == player && player == currentGameState[4]) || (currentGameState[7] == player && player == currentGameState[6]) || (currentGameState[2] == player && player == currentGameState[5]))) {
+    else if(isCellFree(8) && ((currentGameState[0] == player && player == currentGameState[4]) || (currentGameState[7] == player && player == currentGameState[6]) || (currentGameState[2] == player && player == currentGameState[5]))) {
         Selector(8)
     }
 
     //Use Center Position is available
-    else if(currentGameState[4] == '') {
+    else if(isCellFree(4)) {
         Selector(4)
     }
 
     //Opposite Corner Case
-    else if(currentGameState[0] == '' && currentGameState[2] == player && currentGameState[6] == player) {
+    else if(isCellFree(0) && currentGameState[2] == player && currentGameState[6] == player) {
         Selector(0)
     }
-    else if(currentGameState[2] == '' && currentGameState[0] == player && currentGameState[8] == player) {
+    else if(isCellFree(2) && currentGameState[0] == player && currentGameState[8] == player) {
         Selector(2)
     }
-    else if(currentGameState[8] == '' && currentGameState[2] == player && currentGameState[6] == player) {
+    else if(isCellFree(8) && currentGameState[2] == player && currentGameState[6] == player) {
         Selector(8)
     }
-    else if(currentGameState[6] == '' && currentGameState[8] == player && currentGameState[0] == player) {
+    else if(isCellFree(6) && currentGameState[8] == player && currentGameState[0] == player) {
         Selector(6)
     }
 
     //Empty Corner Case
-    else if(currentGameState[0] == '') {
+    else if(isCellFree(0)) {
         Selector(0)
     }
-    else if(currentGameState[2] == '') {
+    else if(isCellFree(2)) {
         Selector(2)
     }
-    else if(currentGameState[8] == '') {
+    else if(isCellFree(8)) {
         Selector(8)
     }
-    else if(currentGameState[6] == '') {
+    else if(isCellFree(6)) {
         Selector(6)
     }
 
     //Empty Side
-    else if(currentGameState[1] == '') {
+    else if(isCellFree(1)) {
         Selector(1)
     }
-    else if(currentGameState[5] == '') {
+    else if(isCellFree(5)) {
         Selector(5)
     }
-    else if(currentGameState[7] == '') {
+    else if(isCellFree(7)) {
         Selector(7)
     }
-    else if(currentGameState[3] == '') {
+    else if(isCellFree(3)) {
         Selector(3)
     }
 
