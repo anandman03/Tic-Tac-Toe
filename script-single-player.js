@@ -146,7 +146,7 @@ function computerPlay() {
         if(!isCellFree(i)) {
             continue
         }
-        for(let j = 0 ; j < possibleCells[i].length ; j++) {
+        for(let j = 0 ; j < possibleCells[i].length ; j+=2) {
             let cell1 = possibleCells[i][j]
             let cell2 = possibleCells[i][j+1]
             if(checkComputerCells(cell1, cell2)) {
@@ -161,7 +161,7 @@ function computerPlay() {
         if(!isCellFree(i)) {
             continue
         }
-        for(let j = 0 ; j < possibleCells[i].length ; j++) {
+        for(let j = 0 ; j < possibleCells[i].length ; j+=2) {
             let cell1 = possibleCells[i][j]
             let cell2 = possibleCells[i][j+1]
             if(checkPlayerCells(cell1, cell2)) {
